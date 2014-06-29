@@ -134,8 +134,8 @@ var showMain = function(req, res, next) {
         req.log.debug({msg: "Showing inbox for logged-in user", user: req.principalUser});
         showInbox(req, res, next);
     } else {
-        req.log.debug({msg: "Showing welcome page"});
-        res.render("main", {page: {title: "Welcome", url: req.originalUrl}});
+        req.log.debug({msg: "Showing welcome page; re-directing to profile..."});
+        res.redirect('/ben');
     }
 };
 
