@@ -168,9 +168,9 @@
                         });
                     }
                 }
-                
+
                 sub = new Pump[def.subView](options);
-                
+
                 if (def.attr) {
                     view[def.attr] = sub;
                 }
@@ -353,7 +353,7 @@
                                    '<a class="close" data-dismiss="alert" href="#">&times;</a>' +
                                    '<p class="alert-message">'+ msg + '</p>' +
                                    '</div>');
-            
+
             view.$(".alert").alert();
         },
         showError: function(msg) {
@@ -444,7 +444,7 @@
             aview.on("ready", function() {
 
                 var idx, $el = view.$(selector);
-                
+
                 aview.$el.hide();
 
                 view.placeSub(aview, $el);
@@ -740,7 +740,7 @@
                 nickname = view.$('#nickname').val(),
                 password = view.$('#password').val();
 
-            if (!nickname || !password || nickname.length === 0 || password.length < 8) {  
+            if (!nickname || !password || nickname.length === 0 || password.length < 8) {
                 view.$(':submit').attr('disabled', 'disabled');
             } else {
                 view.$(':submit').removeAttr('disabled');
@@ -797,7 +797,7 @@
                 };
 
             view.startSpin();
-            
+
             options = {
                 contentType: "application/json",
                 data: JSON.stringify(params),
@@ -948,7 +948,7 @@
         addContinueTo: function() {
             var view = this,
                 continueTo = Pump.getContinueTo();
-            
+
             if (continueTo && continueTo.length > 0) {
                 view.$("form#remote").append($("<input type='hidden' name='continueTo' value='"+Pump.htmlEncode(continueTo)+"'>"));
             }
@@ -972,7 +972,7 @@
             var view = this,
                 nickname = view.$('#nickname').val();
 
-            if (!nickname || nickname.length === 0) {  
+            if (!nickname || nickname.length === 0) {
                 view.$(':submit').attr('disabled', 'disabled');
             } else {
                 view.$(':submit').removeAttr('disabled');
@@ -1003,7 +1003,7 @@
                 };
 
             view.startSpin();
-            
+
             options = {
                 contentType: "application/json",
                 data: JSON.stringify(params),
@@ -1487,7 +1487,7 @@
                 model = view.model,
                 object = view.model.object,
                 modalView;
-            
+
             if (object && object.get("fullImage")) {
 
                 modalView = new Pump.LightboxModal({data: {object: object}});
@@ -1527,7 +1527,7 @@
             var view = this,
                 replies = view.model,
                 full = new Pump.FullReplyStreamView({model: replies});
-            
+
             Pump.body.startLoad();
 
             full.on("ready", function() {
@@ -1626,7 +1626,7 @@
                         repl;
                     // These get stripped for "posts"; re-add it
 
-                    object.author = Pump.principal; 
+                    object.author = Pump.principal;
 
                     repl = new Pump.ReplyView({model: object});
 
@@ -1798,7 +1798,7 @@
                 }
                 view.stopSpin();
             });
-            
+
             return false;
         },
         unfavoriteObject: function() {
@@ -1821,7 +1821,7 @@
                 }
                 view.stopSpin();
             });
-            
+
             return false;
         }
     });
@@ -2390,7 +2390,7 @@
             var view = this,
                 profile = Pump.principal,
                 props = {"displayName": view.$('#realname').val(),
-                         "location": { objectType: "place", 
+                         "location": { objectType: "place",
                                        displayName: view.$('#location').val() },
                          "summary": view.$('#bio').val()};
 
@@ -2479,7 +2479,7 @@
                           }
                          );
             }
-            
+
             return false;
         }
     });
@@ -2768,7 +2768,7 @@
             }
 
             view.startSpin();
-            
+
             Pump.newMajorActivity(act, function(err, act) {
                 if (err) {
                     view.showError(err);
@@ -2943,7 +2943,7 @@
                         content: description
                     })
                 });
-                
+
                 view.startSpin();
 
                 Pump.newMinorActivity(act, function(err, act) {
@@ -2999,13 +2999,13 @@
 
             view.$el.modal('hide');
             view.remove();
-            
+
             callback(null, true);
         },
         no: function() {
             var view = this,
                 callback = view.options.callback;
-            
+
             view.$el.modal('hide');
             view.remove();
 
