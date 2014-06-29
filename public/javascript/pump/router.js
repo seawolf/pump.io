@@ -172,11 +172,7 @@
                                          });
                 });
             } else {
-                Pump.body.setContent({contentView: Pump.MainContent,
-                                      title: "Welcome"},
-                                     function() {
-                                         Pump.body.endLoad();
-                                     });
+                this.myProfile();
             }
         },
 
