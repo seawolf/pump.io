@@ -21,7 +21,7 @@
     Pump.Router = Backbone.Router.extend({
 
         routes: {
-            "":                       "home",    
+            "":                       "myProfile",
             ":nickname":              "profile",   
             ":nickname/favorites":    "favorites",  
             ":nickname/following":    "following",  
@@ -178,6 +178,10 @@
                                          Pump.body.endLoad();
                                      });
             }
+        },
+
+        myProfile: function() {
+            this.profile("ben");
         },
 
         profile: function(nickname) {
