@@ -28,6 +28,7 @@
     <!-- Finally, our own override sheet -->
 
     <link href="/stylesheet/pumpio.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin" rel="stylesheet">
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
