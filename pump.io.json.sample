@@ -16,5 +16,5 @@
     "uploaddir": "/var/local/pump.io/uploads",
     "debugClient": false,
     "firehose": "ofirehose.example",
-    "googleAnalytics": false
+    "googleAnalytics": null
 }
